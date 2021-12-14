@@ -93,6 +93,8 @@ print("New shape of train data: ", test_X.shape)
 
 # %%
 
+# Check that shapes are correct
+
 train_yOHE = to_categorical(train_y, num_classes=26, dtype='int')
 print("New shape of train labels: ", train_yOHE.shape)
 
@@ -100,6 +102,8 @@ test_yOHE = to_categorical(test_y, num_classes=26, dtype='int')
 print("New shape of test labels: ", test_yOHE.shape)
 
 # %%
+
+# Model
 
 model = Sequential()
 
@@ -125,7 +129,7 @@ model.add(Dense(26, activation="softmax"))
 model.compile(optimizer=Adam(learning_rate=0.001),
               loss='categorical_crossentropy', metrics=['accuracy'])
 
-history = model.fit(train_X, train_yOHE, epochs=1,
+history = model.fit(train_X, train_yOHE, epochs=10,
                     validation_data=(test_X, test_yOHE))
 
 # %%
@@ -154,6 +158,8 @@ for i, ax in enumerate(axes):
     ax.grid()
 
 # %%
+
+# TODO: Testing with own image
 
 # img = cv2.imread(r'./testing/img.png')
 # img_copy = img.copy()

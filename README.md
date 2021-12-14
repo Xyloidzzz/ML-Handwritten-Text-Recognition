@@ -19,9 +19,17 @@ Then we took the elements data and turned it into images we can plot for both hu
 
 ![images displayed after data was formatted](./images/output2.png)
 
-We then trained the model.
+We then trained the model. Epochs = 10.
 
 ![running the model](./images/run-model.png)
+
+Here is the output of:
+
+```py3
+model.summary()
+```
+
+![model summary](./images/model-summary.png)
 
 Displayed out accuracy.
 
@@ -30,3 +38,5 @@ Displayed out accuracy.
 And then made a prediction using our testing data.
 
 ![prediction for letter](./images/output3.png)
+
+![prediction for letter](./images/output4.png)
