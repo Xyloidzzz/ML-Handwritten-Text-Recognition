@@ -1,6 +1,6 @@
 '''
 Handwritten Text Recognition
-@author: Alfredo Pena
+@author: Xyloid
 '''
 
 # %%
